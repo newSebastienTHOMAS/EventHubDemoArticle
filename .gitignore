@@ -1,0 +1,5 @@
+﻿DemoEventHubClient/Properties/PublishProfiles
+DemoEventHubClient/Properties/ServiceDependencies/azfcteventhubclientdemo - Zip Deploy
+DemoEventHubClient/Properties/serviceDependencies.azfcteventhubclientdemo - Zip Deploy.json
+DemoEventHubClient/Properties/serviceDependencies.json
+DemoEventHubClient/Properties/serviceDependencies.local.json
