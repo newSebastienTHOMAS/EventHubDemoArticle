@@ -3,3 +3,4 @@ DemoEventHubClient/Properties/ServiceDependencies/azfcteventhubclientdemo - Zip 
 DemoEventHubClient/Properties/serviceDependencies.azfcteventhubclientdemo - Zip Deploy.json
 DemoEventHubClient/Properties/serviceDependencies.json
 DemoEventHubClient/Properties/serviceDependencies.local.json
+/FunctionApp1/Properties/PublishProfiles/democlientEventHubLinux - Zip Deploy.pubxml
