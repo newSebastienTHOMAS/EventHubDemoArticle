@@ -9,8 +9,6 @@ using DemoEventHubIngestion.Service;
 using Microsoft.ApplicationInsights;
 using Microsoft.ApplicationInsights.DataContracts;
 using Microsoft.ApplicationInsights.Extensibility;
-using Microsoft.Azure.EventHubs;
-using Microsoft.Azure.WebJobs;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 
@@ -52,7 +50,7 @@ namespace DemoEventHubIngestion
         //    {
         //        try
         //        {
-        //            string messageBody = Encoding.UTF8.GetString(eventData.Body.Array, eventData.Body.Offset, eventData.Body.Count);
+        //            string messageBody = eventData.EventBody.ToString();
 
         //            // Replace these two lines with your processing logic.
         //            _processMessage.ProcessEventHubRequest(messageBody);                    

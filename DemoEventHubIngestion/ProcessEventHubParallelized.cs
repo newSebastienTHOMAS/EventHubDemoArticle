@@ -1,18 +1,15 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using DemoEventHubIngestion.Model;
 using DemoEventHubIngestion.Service;
 using Microsoft.ApplicationInsights;
 using Microsoft.ApplicationInsights.DataContracts;
 using Microsoft.ApplicationInsights.Extensibility;
-using Microsoft.Azure.EventHubs;
+using Azure.Messaging.EventHubs;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace DemoEventHubIngestion
 {
@@ -47,7 +44,7 @@ namespace DemoEventHubIngestion
             // Loop to launch all the calls Async
             foreach (EventData eventData in events)
             {
-                var messageBody = Encoding.UTF8.GetString(eventData.Body.Array, eventData.Body.Offset, eventData.Body.Count);
+                var messageBody = eventData.EventBody.ToString();
 
                 AsyncTasks.Add(_processMessage.ProcessEventHubRequest(messageBody));
             }
